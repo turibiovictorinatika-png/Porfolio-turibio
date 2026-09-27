@@ -1,0 +1,59 @@
+SITE STATIQUE PRÊT POUR VERCEL
+================================
+
+Ce dossier contient ton site complet, prêt à être déployé sur Vercel.
+Toutes les couleurs, polices et effets qu'on a conçus ensemble sont
+intégrés tels quels : aucune restriction, contrairement à WordPress.com.
+
+ÉTAPE 1 — ACTIVER LE FORMULAIRE DE CONTACT (5 minutes, gratuit)
+-------------------------------------------------------------
+1. Va sur https://formspree.io et crée un compte gratuit (50 messages/mois).
+2. Crée un nouveau formulaire, il te donne une URL du type :
+   https://formspree.io/f/xxxxabcd
+3. Ouvre le fichier contact/index.html, cherche la ligne :
+   <form class="contact-form" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" ...>
+   et remplace "VOTRE_ID_FORMSPREE" par ton propre identifiant.
+4. Formspree enverra chaque message directement à ton adresse email
+   (turibiovictorinatika@gmail.com), sans rien avoir à héberger.
+
+ÉTAPE 2 — DÉPLOYER SUR VERCEL (méthode la plus simple, sans code)
+-------------------------------------------------------------
+1. Crée un compte gratuit sur https://vercel.com (tu peux t'inscrire
+   avec ton email Google directement).
+2. Une fois connecté, va sur https://vercel.com/new
+3. Cherche l'option pour déposer un dossier directement ("Deploy" en
+   glissant-déposant tes fichiers) — si cette option n'apparaît pas
+   directement, utilise "Add New... > Project" puis suis les
+   instructions pour un déploiement sans Git.
+4. Sélectionne (ou glisse) TOUT le contenu de ce dossier (pas le dossier
+   lui-même, mais ce qu'il contient : index.html, a-propos/, services/,
+   etc.)
+5. Vercel te donne immédiatement une adresse du type
+   ton-site.vercel.app — ton site est en ligne, gratuitement, sans pub,
+   avec tes vraies couleurs.
+
+ÉTAPE 3 — AJOUTER UN NOM DE DOMAINE PERSONNALISÉ (optionnel, payant)
+-------------------------------------------------------------
+L'hébergement Vercel est gratuit, mais un nom de domaine personnalisé
+(ex : atikart.com) s'achète séparément chez un registrar (Namecheap,
+OVH...), en général 10-15$/an. Une fois acheté, tu peux le connecter à
+Vercel gratuitement dans Project Settings > Domains.
+Sans ça, ton site reste accessible via ton-site.vercel.app, ce qui
+fonctionne très bien pour démarrer.
+
+À FAIRE ENSUITE
+-------------------------------------------------------------
+- Dupliquer le dossier services/community-management/ pour créer les
+  4 autres pages services (creation-de-contenu, communication-digitale,
+  redaction-web, strategie-social-media), en adaptant le texte.
+- Remplacer les visuels placeholder des Réalisations par tes vraies
+  images une fois disponibles.
+- Remplacer les témoignages et chiffres fictifs par du contenu réel.
+
+IMPORTANT — USAGE COMMERCIAL
+-------------------------------------------------------------
+Le plan gratuit "Hobby" de Vercel est prévu pour un usage personnel/
+non-commercial. Un portfolio professionnel qui sert à te présenter et
+te contacter reste dans cet esprit, mais garde en tête que si le site
+générait directement des revenus (paiement en ligne, etc.), Vercel
+demanderait de passer à un plan payant.
