@@ -91,24 +91,24 @@
     color: var(--color-primary);
   }
 
-  menu-toggle {
+  .menu-toggle {
     display:none;background:none;border:none;cursor:pointer;padding:8px;z-index:200;position:relative
   }
-  menu-toggle span {
+  .menu-toggle span {
     display:block;width:24px;height:2px;background:var(--color-text);margin:5px 0
   }
-  mobile-menu {
+  .mobile-menu {
     display:none;position:fixed;inset:0;background:var(--color-background);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:28px
   }
-  mobile-menu.open {display:flex}
-  mobile-menu a {
+  .mobile-menu.open {display:flex}
+  .mobile-menu a {
     font-family:'Manrope',sans-serif;font-weight:700;font-size:24px;color:var(--color-text)
   }
-  mobile-menu-close {
+  .mobile-menu-close {
     position:absolute;top:24px;right:24px;background:none;border:none;font-size:32px;cursor:pointer
   }
   @media(max-width:900px) {
-    menu-toggle{display:block}
+    .menu-toggle{display:block}
   }
   nav a.active::after {
     content: "";
@@ -186,12 +186,19 @@
   .hero-inner {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 64px;
+    grid-template-areas:
+      "title visual"
+      "rest visual";
+    gap: 0 64px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
   }
+
+  .hero-title-block { grid-area: title; }
+  .hero-visual { grid-area: visual; }
+  .hero-rest-block { grid-area: rest; }
 
   .hero-label {
     font-size: 13px;
@@ -318,10 +325,13 @@
     .hero { padding: 40px 0 64px; }
     .hero-inner {
       grid-template-columns: 1fr;
-      gap: 40px;
+      grid-template-areas:
+        "title"
+        "visual"
+        "rest";
+      gap: 32px;
       padding: 0 20px;
     }
-    .hero-visual { order: -1; }
     .hero-visual .frame { max-width: 320px; }
     .hero h1 { font-size: 34px; max-width: 100%; }
     .hero p.lead { max-width: 100%; }
@@ -1232,18 +1242,9 @@
 <div class="mobile-menu" id="mobileMenu"><button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">×</button><a href="/">Accueil</a><a href="/a-propos/">À propos</a><a href="/services/">Services</a><a href="/realisations/">Réalisations</a><a href="/competences/">Compétences</a><a href="/contact/">Contact</a><a href="/contact/" class="btn btn-primary">Travaillons ensemble</a></div>
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-text">
+    <div class="hero-title-block">
       <div class="hero-label">Communication digitale &amp; Community Management</div>
       <h1>Je transforme vos idées en communication digitale qui attire, engage et valorise votre marque.</h1>
-      <p class="lead">Créateur de contenu et Community Manager à Abomey-Calavi, j’aide personnes, entreprises, institutions et organisations à développer leur visibilité en ligne grâce à une communication digitale stratégique, créative et orientée engagement.</p>
-      <p class="hero-slogan">Des contenus qui attirent, une communication qui crée du lien.</p>
-      <div class="hero-cta">
-        <a href="/contact/" class="btn btn-primary">Travaillons ensemble</a>
-        <a href="/realisations/" class="btn btn-outline">Voir mes réalisations →</a>
-      </div>
-      <div class="hero-reassurance">
-        Community Management, Création de contenu, Communication digitale
-      </div>
     </div>
 
     <div class="hero-visual">
@@ -1254,6 +1255,18 @@
       <div class="floating-badge">
         <div class="number">10</div>
         <div class="label">projets accompagnés</div>
+      </div>
+    </div>
+
+    <div class="hero-rest-block">
+      <p class="lead">Créateur de contenu et Community Manager à Abomey-Calavi, j’aide personnes, entreprises, institutions et organisations à développer leur visibilité en ligne grâce à une communication digitale stratégique, créative et orientée engagement.</p>
+      <p class="hero-slogan">Des contenus qui attirent, une communication qui crée du lien.</p>
+      <div class="hero-cta">
+        <a href="/contact/" class="btn btn-primary">Travaillons ensemble</a>
+        <a href="/realisations/" class="btn btn-outline">Voir mes réalisations →</a>
+      </div>
+      <div class="hero-reassurance">
+        Community Management, Création de contenu, Communication digitale
       </div>
     </div>
   </div>
